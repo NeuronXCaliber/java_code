@@ -1,0 +1,147 @@
+<%-- 
+    Document   : author
+    Created on : 3 Feb, 2021, 10:04:43 PM
+    Author     : user
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="java.util.*"%>
+<%@page import="java.sql.*"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <style>           
+    body{
+            background-image:url("wp4430592.jpg");
+            background-repeat:no-repeat;
+           background-size:700px 700px;
+           background-attachment: fixed;
+           background-position: 50% 50%; 
+        }
+        </style>
+    <body>
+    <center><font color="cyan" face="algerian" size="7pts"><b><br><br>
+            <form name="form1" action="fillup.jsp">
+                <center><u><b>PUBLISHER DETAILS</b></u></font>
+                    <font color="black" face="italic" size="5pts">
+                    <%
+                    try
+                                                       {
+                        Connection con=null;
+                        Class.forName("com.mysql.jdbc.Driver");
+                        con=DriverManager.getConnection("jdbc:mysql://localhost/project2","root"," ");
+                        %>
+                        <br>
+                        <%
+                        String st=request.getParameter("author");
+                        Statement stmt=null;
+                        ResultSet rs=null;
+                        if(st.toLowerCase().trim().equals("1"))
+                                                       {
+                        String SQL="select * from book where author_name='E.balaguruswamy'";
+stmt=con.createStatement();
+rs=stmt.executeQuery(SQL);
+                        }
+                        else if(st.toLowerCase().trim().equals("2"))
+                        {
+                            String SQL="select * from book where author_name='sitansu-banerjee'";
+                            stmt=con.createStatement();
+                            rs=stmt.executeQuery(SQL);
+                 }        
+ else if(st.toLowerCase().trim().equals("3"))
+                        {
+                            String SQL="select * from book where author_name='steven-s-skiena'";
+                            stmt=con.createStatement();
+                            rs=stmt.executeQuery(SQL);
+                 }        
+ else if(st.toLowerCase().trim().equals("4"))
+                        {
+                            String SQL="select * from book where author_name='Rajib-Mall'";
+                            stmt=con.createStatement();
+                            rs=stmt.executeQuery(SQL);
+                 }        
+ else if(st.toLowerCase().trim().equals("5"))
+                        {
+                            String SQL="select * from book where author_name='VASHVANT-KANETKAR'";
+                            stmt=con.createStatement();
+                            rs=stmt.executeQuery(SQL);
+                 }        
+ else if(st.toLowerCase().trim().equals("6"))
+                        {
+                            String SQL="select * from book where author_name='sumita-arora'";
+                            stmt=con.createStatement();
+                            rs=stmt.executeQuery(SQL);
+                 }        
+ else
+                        {
+                            String SQL="select * from book where author_name='e-balaguruswamy'";
+                            stmt=con.createStatement();
+                            rs=stmt.executeQuery(SQL);
+                 }                                                                                                                            
+                                           
+%>
+<br><table border="1" bordercolor="red" bgcolor="white">
+    <tr>
+        <td>BOOKID</td>
+         <td>BOOK-NAME</td>
+          <td>AUTHOR-NAME</td>
+           <td>PUBLISHER-ID</td>
+            <td>PUBLISHER-NAME</td>
+             <td>PUBLISHER-ADDRESS</td>
+              <td>PIN-CODE</td>
+               <td>PRICE</td>
+                <td>STOCK</td>
+    </tr>
+    <tr>
+        <%
+        while(rs.next())
+                       {
+            %>
+            <td><%out.println(rs.getString("bookid"));%></td>
+             <td><%out.println(rs.getString("book_name"));%></td>
+              <td><%out.println(rs.getString("author_name"));%></td>
+               <td><%out.println(rs.getString("publisher_id"));%></td>
+                <td><%out.println(rs.getString("publisher_name"));%></td>
+                 <td><%out.println(rs.getString("publisher_address"));%></td>
+                  <td><%out.println(rs.getString("pin_code"));%></td>
+                   <td><%out.println(rs.getString("price"));%></td>
+                    <td><%out.println(rs.getString("stock"));%></td>
+    </tr>
+    <%
+        }
+                        %>
+</table>
+                        <%
+                        con.close();
+                                               }
+                    catch(SQLException e)
+                                                       {
+                        out.println("SQL Exception:"+e.toString());
+                                               }
+                    catch(ClassNotFoundException cE)
+                                                       {
+                        out.println("Class not found:"+cE.toString());
+                                               }
+                    %>
+                    <br><br></font>
+                    <font color="blue" size="6pts" face="algerian">
+                    WANT TO BUY THIS BOOK
+                    <input type="radio" name="RA" value="t">yes
+                    <input type="radio" name="RA" value="f">no
+                    <br><br>
+                    <blink>CLICK BELOW OPTION TO FILL UP YOUR DETAIL<br></blink><style>
+                        .button{
+                          font-size:20px;
+                          color:white;
+                          background-color: green;
+                            
+                          }</style>
+                    <input type="submit" value="fillup" class="button">
+                    </form>
+                    </font>
+                    </body>
+                    </html>
+        
