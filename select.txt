@@ -1,0 +1,68 @@
+<%-- 
+    Document   : select
+    Created on : 3 Feb, 2021, 4:29:57 PM
+    Author     : user
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <style>
+    body{
+            background-image:url("wp4430587.jpg");
+            background-repeat:no-repeat;
+           background-size:600px 600px;
+           background-attachment: fixed;
+           background-position: 50% 50%; 
+        }
+        </style>
+    <body><center><font color="black" face="algerian" size="7pts">
+        <%
+        String book=request.getParameter("x");
+        if(book.toLowerCase().trim().equals("customer"))
+                       {
+            out.println("<script type=\"text/javascript\">");
+                out.println("alert('Customer Welcome');");
+                out.println("</script>");
+            %>            
+            <br><br><br><br>
+            <form action="customerlogin.jsp">
+                <b>login id</b> => <input type="text" name="username"><br>
+                <b>Password</b> => <input type="password" name="password"><br>
+                <style>
+                    .button{
+                          font-size:20px;
+                          color:white;
+                          background-color: green;
+                            
+                          }</style>
+                    <input type="submit" value="login" class="button">
+                    <%
+                                       }
+        else
+                       {
+            out.println("<script type=\"text/javascript\">");
+                out.println("alert('Publisher Welcome');");
+                out.println("</script>");
+        %>
+        <br><br><br><br><form action="publisherlogin.jsp">
+            <b> login id</b> => <input type="text" name="username"><br>
+            <b>Password</b> => <input type="password" name="password"><br><style>
+                .button{
+                          font-size:20px;
+                          color:white;
+                          background-color: green;
+                            
+                          }</style>
+                    <input type="submit" value="login" class="button">
+                    <%
+                                       }
+        %>
+            </form>
+            </font>
+    </body>
+</html>
