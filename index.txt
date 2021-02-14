@@ -1,0 +1,45 @@
+<%-- 
+    Document   : index
+    Created on : 3 Feb, 2021, 4:03:06 PM
+    Author     : user
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+        <style>     
+    body{
+            background-image:url("wp4430592.jpg");
+            background-repeat:no-repeat;
+           background-size:700px 700px;
+           background-attachment: fixed;
+           background-position: 50% 50%; 
+        }
+        </style>
+    <body>
+    <center><font face="algerian" color="red" size="7pts">
+    <center><h3><u>Online book shopping</u></h3></font>
+        <font face="algerian" color="yellow" size="7pts">
+                <form action="select.jsp">
+            <br>
+           | Customer login | => <input type="radio" name="x"value="customer">
+           <br>
+           | Publisher login | => <input type="radio" name="x" value="publisher">
+           <br><br><style>
+               .button{
+                          font-size:20px;
+                          color:white;
+                          background-color: green;
+                            
+                          }</style>
+               <input type="submit" value="select" class="button"></font>
+        </form>
+    </center>
+    </font>
+</body>
+</html>
+            
