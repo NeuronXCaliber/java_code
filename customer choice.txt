@@ -1,0 +1,106 @@
+<%-- 
+    Document   : choice
+    Created on : 3 Feb, 2021, 8:31:03 PM
+    Author     : user
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+      <style>           
+    body{
+            background-image:url("wp4430592.jpg");
+            background-repeat:no-repeat;
+           background-size:700px 700px;
+           background-attachment: fixed;
+           background-position: 50% 50%; 
+        }
+        </style>
+    <body>
+    <center><font color="red" face="arial" size="6pts"><b><br><br>
+            <%
+            String str=request.getParameter("R1");
+            if(str.toLowerCase().trim().equals("a"))
+                               {
+                %>
+                <form action="book.jsp">
+                    <br>
+                    <style>
+         .mydi2{
+                    background-color:darkgreen;
+                        padding:5px;
+                    border:1px solid green;
+                    width: 50%;
+                    height: 20%;
+                }
+            </style>
+            <div class="mydi2">
+                <b> <center><font face="arial" size="6pts" color="black">
+            Choose an option to search</center></font>
+                    <select name="book">
+                        <option value="1">C-programming
+                        <option value="2">mathematical analysis
+                                <option value="3">JAVA
+                                    <option value="4">algorithm-design
+                                        <option value="5">software-engineering
+                                            <option value="6">let-us-python
+                                                <option value="7">cs-with-python
+                                                    <option value="8">c-programming
+                    </select></div>
+                    <br><br><br><br><br><br><br><br><style>
+                        .button{
+                          font-size:20px;
+                          color:white;
+                          background-color: green;
+                            
+                          }</style>
+                    <input type="submit" value="data" class="button">
+                </form>
+                <%
+                               }
+            else
+                               {
+                %>
+                <form action="author.jsp">
+                    <br>
+                    <style>
+         .mydi4{
+                    background-color:darkgreen;
+                        padding:5px;
+                    border:1px solid green;
+                    width: 50%;
+                    height: 20%;
+                }
+            </style>
+            <div class="mydi4">
+                <b> <center><font face="arial" size="6pts" color="black">
+            Choose an option to search</center></font><select name="author">
+                        <option value="1">E.balaguruswamy
+                            <option value="2">sitansu-banerjee
+                            <option  value="3">steven-s-skiena
+                              <option value="4">Rajib-Mall
+                                <option value="5">VASHVANT-KANETKAR
+                                 <option value="6">sumita-arora
+                                 <option value="7">e-balaguruswamy
+                    </select></div>
+                    <br><br><br><br><br><br><br><br><style>
+                        .button{
+                          font-size:20px;
+                          color:white;
+                          background-color: green;
+                            
+                          }</style>
+                    <input type="submit" value="data" class="button">
+                </form>
+                <%
+                               }
+            %>
+            </font>
+            </body>
+            </html>
+                            
+        

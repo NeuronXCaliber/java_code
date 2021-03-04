@@ -1,0 +1,97 @@
+<%-- 
+    Document   : fillup
+    Created on : 4 Feb, 2021, 2:31:30 PM
+    Author     : user
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+
+</html>
+ <style>           
+    body{
+            background-image:url("wp2036897.jpg");
+            background-repeat:no-repeat;
+           background-size:700px 700px;
+           background-attachment: fixed;
+           background-position: 50% 50%; 
+        }
+        </style>
+    <body>
+    <center>  <b> <font face="algerian" size="7" color="red">
+        <%
+        String str=request.getParameter("RA");
+        if(str.toLowerCase().trim().equals("f"))
+                       {
+        out.println("<script type=\"text/javascript\">");
+                out.println("alert('thank you for visiting our portal');");
+                out.println("location='index.jsp';");
+                out.println("</script>");    
+                %>
+                <br><br>
+                <%
+                               }
+        else
+                       {
+            %>
+            <form action="order.jsp">
+                ORDER DETAILS </font>
+                <br><br>
+                <font color="yellow"size="6pts" face="arial">
+                BOOKID: <input type="text" name="t2"><br>
+                CUSTOMER NAME: <input type="text" name="t3"><br>                               
+
+                                                CUSTOMER ID: <input type="text" name="t4"><br>
+
+                                                                PHONE NUMBER: <input type="text" name="t5"><br>
+
+                                                                                ADDRESS: <input type="text" name="t6"><br>
+
+                                                                                                ORDER DATE: <input type="date" name="t7"><br></font>
+                                                                                                <br>
+                                                                                                <hr width="50%" color="blue">
+                                                                                                <style>
+         .mydiv2{
+                    background-color:aqua;
+                        padding:3px;
+                    border:1px solid green;
+                    width: 20%;
+                    height: 10%;
+                }
+            </style>
+            <div class="mydiv2">
+                <b> <center><font face="algerian" size="6pts" color="black">
+            Make Payment</center></div><br></font>
+                                                                                                
+                                                                                              
+                                  <font color="yellow"size="6pts" face="algerian">              PAYMENT MODE: <select name="bank">
+                                                   <option value="1">SBI</option>
+                                                   <option value="2">UBI</option>
+                                                   <option value="3">HDFC</option>
+                                                   <option value="4">Paytm</option>
+                                                   <option value="5">Netbanking</option>
+                                               </select>
+
+                                  <br>
+                  CARD NUMBER: <input type="password" name="t8"><br>
+                  QUANTITY: <input type="text" name="t9"><br><style>
+                      .button{
+                          font-size:20px;
+                          color:white;
+                          background-color: green;
+                            
+                          }</style>
+                    <input type="submit" value="order" class="button">
+            </form>
+            <%
+                       }
+        %>
+        </font>
+    </center></b>
+    </body>
+</html>

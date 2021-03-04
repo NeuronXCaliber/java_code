@@ -1,0 +1,245 @@
+<%-- 
+    Document   : choice1
+    Created on : 21 Feb, 2021, 8:15:09 PM
+    Author     : user
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+      <style>           
+    body{
+            background-image:url("wp4430592.jpg");
+            background-repeat:no-repeat;
+           background-size:700px 700px;
+           background-attachment: fixed;
+           background-position: 50% 50%; 
+        }
+        </style>
+    <body>
+    <center><font color="red" face="algerian" size="6pts"><b><br><br>
+            <%
+            String str=request.getParameter("R2");
+            if(str.toLowerCase().trim().equals("a"))
+                               {
+                %>
+                <form action="publisherdetail.jsp">
+                    <br>
+                    <style>
+         .mydi8{
+                    background-color:cyan;
+                        padding:3px;
+                    border:1px solid green;
+                    width: 30%;
+                    height: 20%;
+                }
+            </style>
+            <div class="mydi8">
+                <b> <center><font face="arial" size="6pts" color="black">
+            View Publisher details</center></font> <select name="publisher">
+                        <option value ="1">Academy
+                        <option value="2">pearson
+                        <option value="3">springer
+                        <option value="4">BPB
+                        <option value="5">dhanpat-rai
+                        <option value="6">prentice-hall
+                    </select></div>
+                    <br><br><style>
+                              .button{
+                          font-size:20px;
+                          color:white;
+                          background-color: green;
+                            
+                          }</style>
+                          <input type="submit" value="data" class="button">
+                </form>
+                <%
+                               }
+                       else if(str.toLowerCase().trim().equals("b"))
+                               {
+                %>
+                <form action="add.jsp">
+                    <style>
+         .mydi9{
+                    background-color:chartreuse;
+                        padding:3px;
+                    border:1px solid green;
+                    width: 30%;
+                    height: 20%;
+                }
+            </style>
+            <div class="mydi9">
+                <b> <center><font face="arial" size="6pts" color="black">
+            Add book</center></div><br><br></font>
+                    bookid:<input type="text" name="t2">
+                    <br>
+                    book_name:<input type="text" name="t3">
+                    <br>
+                    author_name:<input type="text" name="t4">
+                    <br>
+                    publisher_id:<input type="text" name="t5">
+                    <br>
+                    publisher_name:<input type="text" name="t6">
+                    <br>
+                    publisher_address:<input type="text" name="t7">
+                    <br>
+                    pin_code:<input type="text" name="t8">
+                    <br>
+                    price:<input type="text" name="t9">
+                    <br>
+                    stock:<input type="text" name="t10">
+                    <br><br><style>
+                              .button{
+                          font-size:20px;
+                          color:white;
+                          background-color: green;
+                            
+                          }</style>
+                          <input type="submit" value="Add" class="button">
+                </form>
+                <%
+                               }
+                       else if(str.toLowerCase().trim().equals("c"))
+                               {
+                %>
+                <form action="deleterecord.jsp">
+                    <br>
+                    <style>
+         .myd1{
+                    background-color:darkgoldenrod;
+                        padding:3px;
+                    border:1px solid green;
+                    width: 30%;
+                    height: 20%;
+                }
+            </style>
+            <div class="myd1">
+                <b> <center><font face="arial" size="6pts" color="black">
+            Delete record of book</center></div><br><br><br></font>
+                    Bookid:<input type="text" name="t2">   
+                     <br><br><style>
+                              .button{
+                          font-size:20px;
+                          color:white;
+                          background-color: green;
+                            
+                          }</style>
+                          <input type="submit" value="DELETE" class="button">
+                </form>
+                <%
+            }
+                       else if(str.toLowerCase().trim().equals("d"))
+                               {
+            %>
+            <form action="update.jsp">
+                 <style>
+         .myd3{
+                    background-color:goldenrod;
+                        padding:3px;
+                    border:1px solid green;
+                    width: 30%;
+                    height: 20%;
+                }
+            </style>
+            <div class="myd3">
+                <b> <center><font face="arial" size="6pts" color="black">
+            Update record of book</center></div><br></font>
+            <style>
+         .mydiv{
+                    background-color:greenyellow;
+                        padding:3px;
+                    border:1px solid green;
+                    width: 30%;
+                    height: 20%;
+                }
+            </style>
+            <div class="mydiv">
+                <b> <center><font face="algerian" size="5pts" color="black">
+            bookid:<input type="text" name="t2"> </center></div></font>
+            <br>   
+                    book_name:<input type="text" name="t3">
+                    <br>
+                    author_name:<input type="text" name="t4">
+                    <br>
+                    publisher_id:<input type="text" name="t5">
+                    <br>
+                    publisher_name:<input type="text" name="t6">
+                    <br>
+                    publisher_address:<input type="text" name="t7">
+                    <br>
+                    pin_code:<input type="text" name="t8">
+                    <br>
+                    price:<input type="text" name="t9">
+                    <br>
+                    stock:<input type="text" name="t10">
+                    <br><br><style>
+                              .button{
+                          font-size:20px;
+                          color:white;
+                          background-color: green;
+                            
+                          }</style>
+                          <input type="submit" value="Update" class="button">
+            </form>
+                          <%
+                                                   }
+            else
+                               {
+                
+            %>
+            <form action="publisherbook.jsp">
+                  <style>
+         .myd4{
+                    background-color:mediumseagreen;
+                        padding:3px;
+                    border:1px solid green;
+                    width: 30%;
+                    height: 20%;
+                }
+            </style>
+            <div class="myd4">
+                <b> <center><font face="arial" size="6pts" color="black">
+          view book details</center></div><br></font>
+          <style>
+         .myd7{
+                    background-color:mediumslateblue;
+                        padding:3px;
+                    border:1px solid green;
+                    width: 30%;
+                    height: 20%;
+                }
+            </style>
+            <div class="myd7">
+                <b> <center><font face="arial" size="6pts" color="black">
+            Select name of books</center></font>
+                    <select name="book">
+                        <option value="1">C-programming
+                        <option value="2">mathematical analysis
+                                <option value="3">JAVA
+                                    <option value="4">algorithm-design
+                                        <option value="5">software-engineering
+                                            <option value="6">let-us-python
+                                                <option value="7">cs-with-python
+                                                    <option value="8">c-programming
+                    </select></div>
+                    <br><br><br><style>
+                        .button{
+                          font-size:20px;
+                          color:white;
+                          background-color: green;
+                            
+                          }</style>
+                    <input type="submit" value="View" class="button">
+                </form>
+            <%
+                       }
+            %>
+                
+            </font>
+            </body>
+            </html>
+                    

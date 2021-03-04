@@ -1,0 +1,46 @@
+<%-- 
+    Document   : viewdone
+    Created on : 23 Feb, 2021, 12:33:53 AM
+    Author     : user
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <style>           
+    body{
+            background-image:url("wp4430592.jpg");
+            background-repeat:no-repeat;
+           background-size:700px 700px;
+           background-attachment: fixed;
+           background-position: 50% 50%; 
+        }
+        </style>
+    <body>
+    <center><font color="white" face="algerian" size="7pts"><b><br><br>
+            <form name="vd1">
+
+                <%
+                String st=request.getParameter("vw1");
+                if(st.toLowerCase().trim().equals("OK"))
+                                       {
+out.println("<script type=\"text/javascript\">");
+                out.println("alert(' viewed');");
+                out.println("location='index.jsp';");
+                out.println("</script>");
+                               }
+                else
+                                       {
+                    out.println("<script type=\"text/javascript\">");
+                out.println("alert(' viewed');");
+                out.println("location='index.jsp';");
+                out.println("</script>");
+                }
+                %>
+                </font>
+            </body>
+            </html>

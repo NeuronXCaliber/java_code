@@ -1,0 +1,76 @@
+<%-- 
+    Document   : index
+    Created on : 3 Feb, 2021, 4:03:06 PM
+    Author     : user
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+        <style>     
+    body{
+            background-image:url("wp4430592.jpg");
+            background-repeat:no-repeat;
+           background-size:700px 700px;
+           background-attachment: fixed;
+           background-position: 50% 50%; 
+        }
+        </style>
+    <body>
+    <center><br> <style>
+         .mydiv1{
+                    background-color:goldenrod;
+                        padding:5px;
+                    border:1px solid green;
+                    width: 50%;
+                    height: 10%;
+                }
+            </style>
+            <div class="mydiv1">
+                <b> <center><font face="italic" size="7pts" color="black">
+            Online Book Shopping System</center></div></font>
+                <form action="select.jsp">
+            <br><br><br><br><br><br><br>
+           <style>
+         .mydiv9{
+                    background-color:darkorange;
+                        padding:2px;
+                    border:1px solid green;
+                    width: 20%;
+                    height: 10%;
+                }
+            </style>
+            <div class="mydiv9">
+                <b> <center><font face="arial" size="5pts" color="black">
+            Customer login</center></font><input type="radio" name="x"value="customer"></div>
+           <br><br>
+            <style>
+         .mydiv8{
+                    background-color:darkturquoise;
+                        padding:2px;
+                    border:1px solid green;
+                    width: 20%;
+                    height: 10%;
+                }
+            </style>
+            <div class="mydiv8">
+                <b> <center><font face="arial" size="5pts" color="black">
+            Publisher login</center></font><input type="radio" name="x" value="publisher"></div>
+           <br><br><style>
+               .button{
+                          font-size:20px;
+                          color:white;
+                          background-color: green;
+                            
+                          }</style>
+           <br><br>
+               <input type="Submit" value="Go" class="button"></font>
+        </form>
+    </center>
+</body>
+</html>
+            

@@ -1,0 +1,126 @@
+<%-- 
+    Document   : publisherlogin
+    Created on : 4 Feb, 2021, 11:38:32 PM
+    Author     : user
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    
+ <style>           
+    body{
+            background-image:url("wp4430592.jpg");
+            background-repeat:no-repeat;
+           background-size:700px 700px;
+           background-attachment: fixed;
+           background-position: 50% 50%; 
+        }
+        </style>
+    <body>
+    <center><font color="red" face="algerian" size="7pts"><b><br><br>
+                  <%
+                  String usn=request.getParameter("username");
+                  String pwd=request.getParameter("password");
+                  if(usn.toLowerCase().trim().equals("publisher")  && pwd.toLowerCase().trim().equals("publisher1234"))
+                                           {
+                      out.println("<script type=\"text/javascript\">");
+                      out.println("alert('Successfully logged in');");
+                      out.println("</script");
+                      out.println("<center>CLICK THE SEARCH BELOW</center>");
+                      %>
+                      </font></b>
+                      <form action="choice1.jsp">
+                          <center><br>
+                              <style>
+         .myd10{
+                    background-color:lime;
+                        padding:3px;
+                    border:1px solid green;
+                    width: 30%;
+                    height: 20%;
+                }
+            </style>
+            <div class="myd10">
+                <b> <center><font face="arial" size="5pts" color="black">
+            Search publisher details</center></font>
+                          <input type="radio" name="R2" value="a"></div>
+                          <style>
+         .myd11{
+                    background-color:lightblue;
+                        padding:3px;
+                    border:1px solid green;
+                    width: 30%;
+                    height: 20%;
+                }
+            </style>
+            <div class="myd11">
+                <b> <center><font face="arial" size="5pts" color="black">
+            Add book</center></font>
+                          <input type="radio" name="R2" value="b"></div>
+                          <style>
+         .myd12{
+                    background-color:lightsalmon;
+                        padding:3px;
+                    border:1px solid green;
+                    width: 30%;
+                    height: 20%;
+                }
+            </style>
+            <div class="myd12">
+                <b> <center><font face="arial" size="5pts" color="black">
+            Delete book</center></font>
+                          <input type="radio" name="R2" value="c"></div>
+                          <style>
+         .myd14{
+                    background-color:mediumslateblue;
+                        padding:3px;
+                    border:1px solid green;
+                    width: 30%;
+                    height: 20%;
+                }
+            </style>
+            <div class="myd14">
+                <b> <center><font face="arial" size="5pts" color="black">
+            Update book</center></font>
+                          <input type="radio" name="R2" value="d"></div> 
+                          <style>
+         .myd16{
+                    background-color:darkgoldenrod;
+                        padding:3px;
+                    border:1px solid green;
+                    width: 30%;
+                    height: 20%;
+                }
+            </style>
+            <div class="myd16">
+                <b> <center><font face="arial" size="5pts" color="black">
+            View book record</center></font>
+                          <input type="radio" name="R2" value="e"></div>
+                          <br><br><style>
+                              .button{
+                          font-size:20px;
+                          color:white;
+                          background-color: green;
+                            
+                          }</style>
+                          <input type="submit" value="choice" class="button">
+                          </font>                    
+            <%
+                                       }
+            else
+                               {
+                out.println("<script type=\"text/javascript\">");
+                out.println("alert('incorrect login id or password');");
+                out.println("location='index.jsp';");
+                out.println("</script>");
+                               }
+            %>
+                </form>
+                </font>
+        </body>
+</html>
